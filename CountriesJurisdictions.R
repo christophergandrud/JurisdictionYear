@@ -14,7 +14,7 @@ library(countrycode)
 # Download data GDP per capita (current US$) data
 # Indicator ID: NY.GDP.PCAP.CD
 
-Countries <- WDI(indicator = "NY.GDP.PCAP.CD", start = "1960")
+Countries <- WDI(indicator = "NY.GDP.PCAP.CD", start = "1960", end = "2011")
 
 # Keep only countries with IMFCodes
 Countries$IMFCode <- countrycode(Countries$country, origin = "country.name", destination = "imf")

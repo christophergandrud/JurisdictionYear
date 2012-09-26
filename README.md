@@ -10,7 +10,7 @@ The R source code file `CountriesJurisdictions.R` in this repository can be used
 
 - have been given an [IMF country code](http://www.esds.ac.uk/international/support/use- r_guides/imf/ifs.asp).
 
-The file uses the most recently available data from the [World Bank Development Indicator's website](http://data.worldbank.org/indicator/NY.GDP.PCAP.KN). So it will automatically have the most recent list of jurisdictions from **1960 through the year before the current year**.
+The file uses the most recently available data from the [World Bank Development Indicator's website](http://data.worldbank.org/indicator/NY.GDP.PCAP.KN). So it will automatically have the most recent list of jurisdictions from **1960 through 2011**.
 
 > Note: this is not a list of independent countries. It includes some non-country jurisdictions (ex. American Samoa) and it excludes countries that the World Bank does not have GDP per Capita data for (ex. Afghanistan 1982-2000). 
 
