@@ -1,4 +1,4 @@
-# Valid Jurisdiction-Year Creator (1960-Previous Year)
+# Valid Jurisdiction-Year Creator (1960-2011)
 ### Created by Christopher Gandrud
 ### Updated 26 September 2012
 
