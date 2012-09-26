@@ -27,6 +27,11 @@ Countries <- Countries[Countries$IMFCode != 696, ]
 # Remove country-years with no GDP per capita data
 Countries <- Countries[!is.na(Countries$NY.GDP.PCAP.CD), ]
 
-
 # Create logical existance variable 
-Countries$Exists <- TRUE
+Countries$Data <- TRUE
+
+# Keep country, year, IMFcode, Data variables
+Countries <- Countries[, c("country", "year", "IMFCode", "Data")]
+
+
+

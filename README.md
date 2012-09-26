@@ -53,6 +53,20 @@ Then run the following code:
 library(devtools)
 
 # Run CountriesJurisdictions.R
-source_url("")
+source_url("https://raw.github.com/christophergandrud/JurisdictionYear/master/CountriesJurisdictions.R")
 ```
+
+This will create a data frame called `Countries` with the following variables:
+
+| Variable   | Description  |
+| ---------- | ------------ |
+| `country`  | Country name |
+| `year`     | Year         |
+| `IMFCode`  | The IMF Code |
+| `Data`     | A logical variable = TRUE |
+
+### Merge and Subset
+
+Now merge `Countries` with your data frame and subset it to remove all country-years that do not have GDP per Capita data/an IMF code.
+
 
