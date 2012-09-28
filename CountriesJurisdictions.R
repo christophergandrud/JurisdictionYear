@@ -19,13 +19,13 @@ lapply(toInstall, library, character.only = TRUE)
 # Indicator ID: NY.GDP.PCAP.CD
 Countries <- WDI(indicator = "NY.GDP.PCAP.CD", start = "1960", end = "2011")
 
-# Keep only countries with IMFCodes
-Countries$IMFCode <- countrycode(Countries$country, origin = "country.name", destination = "imf")
+# Keep only countries with imfcodes
+Countries$imfcode <- countrycode(Countries$country, origin = "country.name", destination = "imf")
 
-Countries <- Countries[!is.na(Countries$IMFCode), ]
+Countries <- Countries[!is.na(Countries$imfcode), ]
 
 # Remove EU
-Countries <- Countries[Countries$IMFCode != 696, ]
+Countries <- Countries[Countries$imfcode != 696, ]
 
 # Remove country-years with no GDP per capita data
 Countries <- Countries[!is.na(Countries$NY.GDP.PCAP.CD), ]
@@ -34,4 +34,4 @@ Countries <- Countries[!is.na(Countries$NY.GDP.PCAP.CD), ]
 Countries$Data <- TRUE
 
 # Keep country, year, IMFcode, Data variables
-Countries <- Countries[, c("country", "year", "IMFCode", "Data")]
+Countries <- Countries[, c("country", "year", "imfcode", "Data")]
