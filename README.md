@@ -53,7 +53,7 @@ Then run the following code:
 library(devtools)
 
 # Run CountriesJurisdictions.R
-source_url("https://raw.github.com/christophergandrud/JurisdictionYear/master/CountriesJurisdictions.R")
+source_url("http://bit.ly/Pbcfls")
 ```
 
 This will create a data frame called `Countries` with the following variables:
