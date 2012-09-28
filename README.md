@@ -1,6 +1,6 @@
 # Valid Jurisdiction-Year Creator (1960-2011)
 ### Created by Christopher Gandrud
-### Updated 26 September 2012
+### Updated 28 September 2012
 
 ---
 
@@ -38,13 +38,13 @@ Removing these country-years from at the start of the analysis helps avoid:
 
 ## Use
 
-To use `CountriesJurisdictions.R` first make sure that you install the following packages in R:
+To use `CountriesJurisdictions.R` first make sure that you install the following packages in R.
 
-```
-install.packages("WDI",
-				  "countrycode",
-				  "devtools")
-```
+- WDI
+- countrycode
+- devtools
+
+You can install them be setting `doInstall <- TRUE` at the top of `CountriesJurisdictions.R`.
 
 Then run the following code:
 

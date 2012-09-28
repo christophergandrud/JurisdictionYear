@@ -1,19 +1,21 @@
 ############ 
 # Jurisdiction-Year Indicator
 # Christopher Gandrud
-# Updated 26 September 2012
+# Updated 28 September 2012
 ############
 
 ## This file creates a data frame of countries & jurisdictions that report GDP per capita (current US$) data set
 ## to the World Bank & have an IMF Country Code for each year from 1960 to the present.
 
-# Load required packages
-library(WDI)
-library(countrycode)
+# Install & load required packages
+## Based on https://gist.github.com/3710171
+doInstall <- FALSE  # Change to FALSE if you don't want packages installed.
+toInstall <- c("WDI", "countrycode", "devtools")
+if(doInstall){install.packages(toInstall, repos = "http://cran.us.r-project.org")}
+lapply(toInstall, library, character.only = TRUE)
 
 # Download data GDP per capita (current US$) data
 # Indicator ID: NY.GDP.PCAP.CD
-
 Countries <- WDI(indicator = "NY.GDP.PCAP.CD", start = "1960", end = "2011")
 
 # Keep only countries with IMFCodes
@@ -32,6 +34,3 @@ Countries$Data <- TRUE
 
 # Keep country, year, IMFcode, Data variables
 Countries <- Countries[, c("country", "year", "IMFCode", "Data")]
-
-
-
