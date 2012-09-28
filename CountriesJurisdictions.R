@@ -9,6 +9,7 @@
 
 # Install & load required packages
 ## Based on https://gist.github.com/3710171
+## See also http://bit.ly/PbabKd
 doInstall <- FALSE  # Change to FALSE if you don't want packages installed.
 toInstall <- c("WDI", "countrycode", "devtools")
 if(doInstall){install.packages(toInstall, repos = "http://cran.us.r-project.org")}
